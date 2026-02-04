@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID</title>
+    
+</head>
+
+<body>
+    A<input type="text" id="ta">
+    <br>
+    B<input type="text" id="tb">
+    <input type="button" onclick="doSwap()" value="Swap">
+    <script>
+        function doSwap() {
+            var x = document.getElementById("ta");
+            var y = document.getElementById("tb");
+            var roshan=Number(x.value);
+            var prince=Number(y.value);
+            roshan=roshan+prince;
+            prince=roshan-prince;
+            roshan=roshan-prince;
+
+            x.value=roshan;
+            y.value=prince;
+        }
+    </script>
+</body>
+
+</html>

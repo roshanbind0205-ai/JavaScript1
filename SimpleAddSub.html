@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function add(){
+            let txt1= Number(document.getElementById("a").value);
+            let txt2=Number(document.getElementById("b").value);
+            document.getElementById("Result").innerHTML  = txt1+txt2;
+        }
+        function sub(){
+            let txt1= Number(document.getElementById("a").value);
+            let txt2=Number(document.getElementById("b").value);
+            document.getElementById("Result").innerHTML  = txt1-txt2;
+        }
+    </script>
+</head>
+<body>
+    <input id="a" type="text">
+    <br><br>
+    <input id="b" type="text">
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    
+    <button onclick="sub()">Sub</button>
+    <h1 >Result</h1>
+    <h1 id="Result"></h1>
+
+</body>
+</html>

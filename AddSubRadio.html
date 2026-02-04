@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculator(){
+            let a=Number(document.getElementById("a").value);
+            let b=Number(document.getElementById("b").value);
+            let op=document.querySelector('input[name="rr"]:checked');
+            let result;
+            if(!op){
+                alert("please select any option");
+                result;
+            }
+            switch(op.value){
+                case "add":
+                result=a+b;
+                break;
+                case "sub":
+                result=a-b;
+                break;
+            }
+            document.getElementById("result").value=result;
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="text" id="a" placeholder="Enter first number" />
+    <br><br>
+    <input type="text" id="b" placeholder="Enter second number" />
+    <br><br>
+    <input type="text" id="result" placeholder="Result" />
+     <br><br>
+    <input  type="radio" name="rr" value="add">ADD
+    <input  type="radio" name="rr" value="sub" >SUB
+    <button onclick="calculator()" >click</button>
+    
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+
+    <script>
+        function f1(){
+            var div=document.getElementById("output");
+            var output="", n=10;
+            for(var i=1;i<=n;i++){
+                output=output + i + ",";
+            }
+            div.innerHTML=output;
+        }
+        function f2(){
+            var div=document.getElementById("output");
+            var output="", n=10;
+            for(var i=n; i>=1;i--){
+                output=output + i + ",";
+            }
+            div.innerHTML=output;
+        }
+
+
+    </script>
+</head>
+<body>
+    Output<div id="output"></div>
+    <input type="button" onclick="f1()" value="Forward Loop">
+    <input type="button" onclick="f2()" value="Backward Loop">
+</body>
+</html>
