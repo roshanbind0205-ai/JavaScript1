@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="result"></div>
     <button onclick=" clearDiv(); asynccountdown()">async</button>
     <button onclick=" clearDiv(); simplecountdown()">simple</button>
     <script>
-const resultdiv=document.getElementById("result");
-function clearDiv()
-{
-    resultdiv.innerHTML="";
-}
-function showDiv(data){
-resultdiv.innerHTML+=`<br>${data}`;
-}
+        const resultdiv = document.getElementById("result");
+        function clearDiv() {
+            resultdiv.innerHTML = "";
+        }
+        function showDiv(data) {
+            resultdiv.innerHTML += `<br>${data}`;
+        }
         console.log("A: Start");
         showDiv("A: Start");
         function solve(x) {
