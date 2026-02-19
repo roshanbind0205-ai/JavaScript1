@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name</title>
 
     <script>
-        function doCheckAll(){
-            var radiobutton=document.getElementsByName("game");
-            var n=radiobutton.length;
-            for(var i=0;i<=n-1;i++){
-                radiobutton[i].checked="";
+        function doCheckAll() {
+            var radiobutton = document.getElementsByName("game");
+            var n = radiobutton.length;
+            for (var i = 0; i <= n - 1; i++) {
+                radiobutton[i].checked = "";
             }
         }
     </script>
 </head>
+
 <body>
     A<input type="radio" name="game">
     <br>
@@ -32,4 +34,5 @@
     <br>
     <input type="button" onclick="doCheckAll()" value="unCheck">
 </body>
+
 </html>

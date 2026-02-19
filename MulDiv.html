@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,42 @@
 
 
     <script>
-    function create(){
-        let a=Number(document.getElementById("a").value);
-        let b=Number(document.getElementById("b").value);
+        function create() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
 
-        let ro=document.querySelector('input[name="rr"]:checked');
-        let result;
+            let ro = document.querySelector('input[name="rr"]:checked');
+            let result;
 
-        if(!ro){
-            alert("select any option ");
-            result;
+            if (!ro) {
+                alert("select any option ");
+                result;
+            }
+            switch (ro.value) {
+                case "mul":
+                    result = a * b;
+                    break;
+
+                case "div":
+                    result = a / b;
+                    break;
+            }
+            document.getElementById("result").value = result;
         }
-        switch(ro.value){
-            case "mul":
-            result=a*b;
-            break;
 
-            case "div":
-            result=a/b;
-            break;
-        }
-       document.getElementById("result").value=result;
-    }
-    
     </script>
 </head>
+
 <body>
     <input type="text" id="a" placeholder="Enter first number" />
     <br><br>
     <input type="text" id="b" placeholder="Enter second number" />
     <br><br>
     <input type="text" id="result" placeholder="Result" />
-     <br><br>
-    <input  type="radio" name="rr" value="mul">MUL
-    <input  type="radio" name="rr" value="div" >DIV
-    <button onclick="create()" >click</button>
+    <br><br>
+    <input type="radio" name="rr" value="mul">MUL
+    <input type="radio" name="rr" value="div">DIV
+    <button onclick="create()">click</button>
 </body>
+
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move to</title>
+    <style>
+        .moveButton {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width:100px;
+            height: 100px;
+            background-color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="pic/WhatsApp Image 2026-02-02 at 5.00.21 PM.jpeg" class="moveButton" id="moveButton">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <button onclick="moveTotal()">Move</button>
+    <script>
+
+        const currentMovebutton = document.getElementById('moveButton');
+
+        let boundaryleft = window.innerWidth - 100;
+        let boundarytop = window.innerHeight - 100;
+        let buttonLeft = 0;
+        let buttonTop = 0;
+        let currentMove = "left";
+        let currentloop = 0;
+        function moveButton() {
+            if (currentMove === "left") {
+                buttonLeft += 1;
+                currentMovebutton.style.left = buttonLeft + "px";
+                if (buttonLeft >= boundaryleft) {
+                    currentMove = "down";
+                    return;
+                }
+            }
+            if (currentMove === "down") {
+                buttonTop += 1;
+                currentMovebutton.style.top = buttonTop + "px";
+                if (buttonTop >= boundarytop) {
+                    currentMove = "right";
+                    return;
+                }
+            }
+            if (currentMove === "right") {
+                buttonLeft -= 1;
+                currentMovebutton.style.left = buttonLeft + "px";
+                if (buttonLeft <= 0) {
+                    currentMove = "up";
+                    return;
+                }
+            }
+            if (currentMove === "up") {
+                buttonTop -= 1;
+                currentMovebutton.style.top = buttonTop + "px";
+                if (buttonTop <= 0) {
+                    currentMove = "left";
+                    return;
+                }
+            }
+
+        }
+        function moveTotal() {
+            currentloop = setInterval(moveButton,10);
+        }
+
+    </script>
+</body>
+
+</html>
